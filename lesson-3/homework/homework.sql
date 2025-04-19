@@ -27,11 +27,11 @@ SELECT TOP 1 * from Employees order by Salary desc
 SELECT Department,COUNT(*)as cnt ,AVG(Salary) as avg_salary  from Employees group by Department
 
 select *,
-	case
-		when Salary > 80000 then 'High'
-		when Salary between 50000 and 80000 then 'Medium'
-		else 'Low'
-	end as SalaryCategory
+  case
+    when Salary > 80000 then 'High'
+    when Salary between 50000 and 80000 then 'Medium'
+    else 'Low'
+  end as SalaryCategory
 from Employees
 
 
@@ -65,9 +65,9 @@ select * from Orders where Status in('Delivered' ,'Shipped') AND OrderDate betwe
 
 select *,
 case 
-	when Status in ('Shipped','Delivered') then 'Completed'
-	when Status  = 'Pending'  then 'Pending'
-	when Status = 'Cancelled' then 'Cancelled'
+  when Status in ('Shipped','Delivered') then 'Completed'
+  when Status  = 'Pending'  then 'Pending'
+  when Status = 'Cancelled' then 'Cancelled'
 end as OrderStatus
 from Orders 
 
@@ -109,8 +109,8 @@ select Category,MAX(Price) as most_expensive from Products group by Category
 
 select *,Stock,
 IIF(Stock = 0, 'Out of Stock',
-	IIF(Stock between 1 and 10,'Low Stock','In Stock')
-	) as Status 
+  IIF(Stock between 1 and 10,'Low Stock','In Stock')
+  ) as Status 
 from Products
 
-select * from Products order by Price desc offset 5 rows 
+select * from Products order by Price desc offset 5 rows
