@@ -39,7 +39,7 @@ SELECT Department,COUNT(*)as cnt ,AVG(Salary) as avg_salary  from Employees grou
 
 select * from Employees order by EmployeeID offset 2 rows fetch next 5 rows only 
 
-------------------------------------------------
+--------------------------------------------
 
 CREATE TABLE Orders (
     OrderID INT PRIMARY KEY,
