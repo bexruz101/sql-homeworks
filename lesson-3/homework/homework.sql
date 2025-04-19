@@ -77,7 +77,7 @@ select * from Orders where TotalAmount > 5000
 
 select * from Orders order by TotalAmount desc
 
-------------------------------------------------------
+----------------------------------------------------
 
 CREATE TABLE Products (
     ProductID INT PRIMARY KEY,
